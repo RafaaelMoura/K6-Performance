@@ -20,13 +20,9 @@ const mytrend = new Trend('Taxa de espera'); //metrica tendencia
 
 export default function(){
     const req = http.get('https://test.k6.io/');
-    chamadas.add(1);
-    //metrica contador 
-    myGauge.add(req.timings.blocked);
-    //metrica medidor
-    myRate.add(req.status === 200);
-    //metrica taxa
-    mytrend.add(req.timings.waiting);
-    //metrica tendencia
+    chamadas.add(1); //metrica contador 
+    myGauge.add(req.timings.blocked); //metrica medidor
+    myRate.add(req.status === 200); //metrica taxa
+    mytrend.add(req.timings.waiting); //metrica tendencia
 
 }
