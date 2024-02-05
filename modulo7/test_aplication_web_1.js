@@ -12,7 +12,7 @@ export const options = {
 ///Execução////////////////////////////////////////////////////////////////////
 
 export default async function(){
-    const browser = chromium.launch ({ headless: true });
+    const browser = chromium.launch ({ headless: true});
     const context = browser.newContext();
     const page = context.newPage();
 
@@ -31,4 +31,5 @@ export default async function(){
 
 
 };
-//// para "RUN" de script web usa-se no terminal o código K6_BROWSER_ENABLED=true k6 run (Exemplo:K6_BROWSER_ENABLED=true k6 run test_aplication_web_1.js)
+////Para "RUN" de script web usa-se no terminal do "Gitbash" o código K6_BROWSER_ENABLED=true k6 run (Exemplo:K6_BROWSER_ENABLED=true k6 run test_aplication_web_1.js)
+//// Para teste em perfomance usa-se o k6 na versão acima do 0.43
